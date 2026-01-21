@@ -12,6 +12,13 @@ exist but are not initialized, so they are in the temporal dead zone until their
 declaration is evaluated.
 ### Variable Hoisting
 
+
+```javascript
+
+console.log(title); //ReferenceError: title is not defined
+
+```
+
 In JavaScript, variable declarations using `var` are hoisted to the top of their scope. This means that the declaration is processed before any code is executed, but the assignment (initialization) happens in place. That’s why, in the following example:
 
 ```javascript
@@ -30,7 +37,7 @@ title = "Hoisting"; // assignment stays in place
 
 Here’s what happens:
 - The declaration `var title` is hoisted to the top, so the variable `title` exists before any code runs, but its value is `undefined` until the assignment line is reached.
-- When `console.log(title)` is executed, `title` exists but hasn't been assigned `"Hoisting demo"` yet, so it logs `undefined`.
+- When `console.log(title)` is executed, `title` exists but hasn't been assigned `"Hoisting"` yet, so it logs `undefined`.
 
 This illustrates variable hoisting: only the declaration, not the assignment, is moved to the top.
 
